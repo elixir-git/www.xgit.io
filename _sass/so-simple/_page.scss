@@ -65,16 +65,18 @@
 }
 
 .page-sidebar {
-  font-size: 0.75em;
+  font-size: 0.7em;
+  font-weight: 300;
 
   @include breakpoint($large) {
-    text-align: center;
+    padding-top: 6px;
+    text-align: left;
   }
 
   .page-date,
   .read-time {
     font-family: $meta-font-family;
-    font-style: italic;
+    font-style: normal;
     white-space: nowrap;
   }
 

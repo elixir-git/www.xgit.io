@@ -2,6 +2,8 @@
 {%- assign author = site.data.authors[author] | default: author -%}
 
 <div class="page-author h-card p-author">
+  {% if page.date %}{% include page-date.html %}{% endif %}
+
   {%- if author.picture -%}
     {%- if author.picture contains "://" -%}
       {%- assign author_picture = author.picture -%}
@@ -31,7 +33,7 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
-    {% if site.read_time %}{% include read-time.html %}{% endif %}
-    {% if page.date %}{% include page-date.html %}{% endif %}
   </div>
+
+  {% if site.read_time %}{% include read-time.html %}{% endif %}
 </div>
