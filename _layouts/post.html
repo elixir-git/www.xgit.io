@@ -26,6 +26,10 @@ layout: default
           {{ content }}
         </div>
 
+        {% include endmark.html %}
+
+        {% include page-pagination.html %}
+
         {% if page.share %}
           {% include social-share.html %}
         {% endif %}
@@ -34,7 +38,6 @@ layout: default
           {% include disqus-comments.html %}
         {% endif %}
 
-        {% include page-pagination.html %}
       </div>
     </div>
   </article>
