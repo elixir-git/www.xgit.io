@@ -224,6 +224,35 @@
   }
 }
 
+.layout--home {
+  .page-title {
+    display: none;
+  }
+
+  .home-intro {
+    background-color: $elixir-color;
+    color: #fff;
+    border-radius: .6rem;
+    padding: .5rem 1rem;
+    margin-bottom: 4rem;
+
+    p {
+      margin: .7rem 0;
+      line-height: 1.3;
+
+      a {
+        color: #fff;
+        font-style: italic;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 .layout--post {
   .page-wrapper {
     @include breakpoint($large) {
