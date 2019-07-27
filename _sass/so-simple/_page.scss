@@ -32,7 +32,7 @@
   @include breakpoint($large) {
     margin-top: (-2 * $site-logo-height) / 2;
   }
-  
+
   img {
     width: 100%;
   }
@@ -266,12 +266,15 @@
       float: right; // display: grid fallback
       width: 78%; // display: grid fallback
       min-width: 0;
+      line-height: 1.6;
     }
 
     @supports (display: grid) {
       width: auto;
       margin: 0;
     }
+
+    max-width: 28em;
   }
 
   .page-share {
