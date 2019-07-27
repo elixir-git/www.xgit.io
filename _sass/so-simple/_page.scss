@@ -86,6 +86,7 @@
     }
   }
 
+  .page-date + .read-time::before,
   .read-time + .page-date::before {
     content: "\2022";
     padding: 0 0.5em;

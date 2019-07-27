@@ -3,6 +3,7 @@
 
 <div class="page-author h-card p-author">
   {% if page.date %}{% include page-date.html %}{% endif %}
+  {% if site.read_time %}{% include read-time.html %}{% endif %}
 
   {%- if author.picture -%}
     {%- if author.picture contains "://" -%}
@@ -34,6 +35,4 @@
       </ul>
     {%- endif -%}
   </div>
-
-  {% if site.read_time %}{% include read-time.html %}{% endif %}
 </div>
