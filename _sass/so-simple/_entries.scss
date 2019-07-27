@@ -26,11 +26,11 @@
 }
 
 .entry-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  padding-right: 3em;
   font-family: $title-font-family;
   font-weight: $entry-title-weight;
-  font-style: italic;
-  letter-spacing: -1px;
+  font-style: normal;
   word-wrap: break-word; /* break long words that could overflow */
 
   a {
