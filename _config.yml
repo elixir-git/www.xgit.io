@@ -21,7 +21,7 @@ baseurl: "/"
 url: "https://xgit.io"
 logo: "/assets/images/xgit-logo.png"
 repository: "elixir-git/www.xgit.io"
-date_format: "%B %-d, %Y"
+date_format: "%d %B %Y"
 read_time: true
 words_per_minute: 200
 mathjax: # MathJax equations, e.g. true
