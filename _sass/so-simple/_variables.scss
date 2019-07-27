@@ -39,7 +39,7 @@ $h6-max: ($base-font-size / $modular-scale-2) !default;
 
 /* Font Families */
 $serif-font-family: "Cormorant Garamond", serif !default;
-$sans-serif-font-family: "Source Sans Pro", sans-serif !default;
+$sans-serif-font-family: "Fjalla One", sans-serif !default;
 $monospace-font-family: Menlo, Consolas, Monaco, "Courier New", Courier, monospace !default;
 
 $base-font-family: $serif-font-family !default;
@@ -48,7 +48,7 @@ $title-font-family: $sans-serif-font-family !default;
 $description-font-family: $sans-serif-font-family !default;
 $meta-font-family: $serif-font-family !default;
 
-$page-title-weight: bold !default;
+$page-title-weight: normal !default; // bold !default;
 $entry-title-weight: bold !default;
 
 /* Colors */

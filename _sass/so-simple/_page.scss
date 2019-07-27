@@ -11,11 +11,13 @@
 
 .page-title {
   @include fluid-type($min-vw, $max-vw, 48px, 60px);
-  margin-bottom: 0.5em;
+  padding-bottom: .25em;
+  margin-bottom: 1em;
+  border-bottom: 4px solid #ddd;
   font-family: $title-font-family;
   font-weight: $page-title-weight;
-  font-style: italic;
-  letter-spacing: -2px;
+  font-style: normal;
+  letter-spacing: -1px;
 }
 
 .page-image {
