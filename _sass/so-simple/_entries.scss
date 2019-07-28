@@ -59,13 +59,15 @@
   .entry-date,
   .read-time {
     font-family: $meta-font-family;
-    font-style: italic;
+    font-style: normal;
     white-space: nowrap;
   }
 
+  .entry-date + .read-time::before,
   .read-time + .entry-date::before {
-    content: "\2022";
-    padding: 0 0.5em;
+    content: "\2022\00a0";
+    padding: 0;
+    margin: 0.35em;
   }
 }
 
@@ -88,6 +90,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin-top: 4rem;
     margin-bottom: 2rem;
   }
 
