@@ -8,4 +8,4 @@ It is built using the following tools:
 
 * [Jekyll](https://jekyllrb.com/)
 * [So Simple theme](https://mmistakes.github.io/so-simple-theme/) by [Michael Rose](https://mademistakes.com/)
-* [Netlify](https://www.netlify.com/) hosting.
+* [Netlify](https://www.netlify.com/) hosting
