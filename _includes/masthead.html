@@ -1,7 +1,7 @@
 <header class="masthead">
   <div class="wrap">
     {% if site.logo %}
-      {% unless page.layout == 'post' %}
+      {% unless page.layout == 'post' or page.layout == 'page' %}
         <a href="{{ '/' | relative_url }}" class="site-logo" rel="home" title="{{ site.title }}">
           <img src="{{ site.logo | relative_url }}" class="site-logo-img animated fadeIn" alt="{{ site.title }}">
         </a>

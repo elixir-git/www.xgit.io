@@ -144,6 +144,7 @@ pre {
 
 a {
   background-color: transparent; /* 1 */
+  text-decoration: none;
   -webkit-text-decoration-skip: objects; /* 2 */
 }
 
@@ -154,6 +155,7 @@ a {
 
 a:active,
 a:hover {
+  text-decoration: underline;
   outline-width: 0;
 }
 
