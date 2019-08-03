@@ -4,7 +4,7 @@ sub_title: "To port or not to port?"
 last_modified_at: 2019-07-27T21:51:00-07:00
 ---
 
-_To port, or not to port?_
+To port, or not to port?
 
 That is the question.
 
@@ -38,11 +38,11 @@ For now, I'm just on _plumbing_ commands – the inner workings of git that form
 
 A primary design goal of Xgit is to allow git repositories to be stored in arbitrary locations other than file systems. (In a server environment, it likely makes sense to store content in a database or cloud-based file system such as S3.)
 
-For that reason, the concept of **"repository"** in Xgit is kept intentionally minimal. [`Xgit.Repository`](https://github.com/elixir-git/xgit/blob/master/lib/xgit/repository.ex) is a behaviour module that describes the interface that a storage implementor would need to implement and very little else. (A repository is implemented using `GenServer` so that it can maintain its state independently. [`Xgit.Repository`](https://github.com/elixir-git/xgit/blob/master/lib/xgit/repository.ex) provides a wrapper interface for the calls that other modules within Xgit need to make to manipulate the repository.)
+For that reason, the concept of **"repository"** in Xgit is kept intentionally minimal. [`Xgit.Repository`](https://hexdocs.pm/xgit/Xgit.Repository.html) is a behaviour module that describes the interface that a storage implementor would need to implement and very little else. (A repository is implemented using `GenServer` so that it can maintain its state independently. [`Xgit.Repository`](https://hexdocs.pm/xgit/Xgit.Repository.html) provides a wrapper interface for the calls that other modules within Xgit need to make to manipulate the repository.)
 
-A **typical end-user developer** will typically construct an instance of [`Xgit.Repository.OnDisk`](https://github.com/elixir-git/xgit/blob/master/lib/xgit/repository/on_disk.ex) (or some other module that implements a different storage architecture as described next) and then use the modules in the [`api` folder](https://github.com/elixir-git/xgit/tree/master/lib/xgit/api) folder to inspect and modify the repository.
+A **typical end-user developer** will typically construct an instance of [`Xgit.Repository.OnDisk`](https://hexdocs.pm/xgit/Xgit.Repository.OnDisk.html) (or some other module that implements a different storage architecture as described next) and then use the modules in the [`api` folder](https://github.com/elixir-git/xgit/tree/master/lib/xgit/api) folder to inspect and modify the repository.
 
-A **storage architect** will construct a module that encapsulates the desired storage mechanism in a `GenServer` process and makes that available to the rest of Xgit by implementing the [`Xgit.Repository`](https://github.com/elixir-git/xgit/blob/master/lib/xgit/repository.ex) behaviour interface. I am building the [`Xgit.Repository.OnDisk`](https://github.com/elixir-git/xgit/blob/master/lib/xgit/repository/on_disk.ex) module, which demonstrates the _concept_ of a storage architecture, but my hope is that other developers could implement other storage mechanisms by providing new implementations of the [`Xgit.Repository`](https://github.com/elixir-git/xgit/blob/master/lib/xgit/repository.ex) behaviour.
+A **storage architect** will construct a module that encapsulates the desired storage mechanism in a `GenServer` process and makes that available to the rest of Xgit by implementing the [`Xgit.Repository`](https://hexdocs.pm/xgit/Xgit.Repository.html) behaviour interface. I am building the [`Xgit.Repository.OnDisk`](https://hexdocs.pm/xgit/Xgit.Repository.OnDisk.html) module, which demonstrates the _concept_ of a storage architecture, but my hope is that other developers could implement other storage mechanisms by providing new implementations of the [`Xgit.Repository`](https://hexdocs.pm/xgit/Xgit.Repository.html) behaviour.
 
 ## Categories of Code
 
