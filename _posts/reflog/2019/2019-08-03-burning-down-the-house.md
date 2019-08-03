@@ -86,4 +86,4 @@ So it should surprise no one that I'm employing a very aggressive strategy of ve
 
 ## What's Next?
 
-Having wrapped up `git hash-object`, I'll continue through the [git objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) page. Next up is `git cat-object`.
+Having wrapped up `git hash-object`, I'll continue through the [git objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) page. Next up is [`git cat-file`](https://git-scm.com/docs/git-cat-file).
