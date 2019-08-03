@@ -1,7 +1,7 @@
 ---
 title: "Burning Down the House"
 sub_title: "To port or not to port?"
-last_modified_at: 2019-07-27T21:51:00-07:00
+last_modified_at: 2019-08-03T10:24:00-07:00
 ---
 
 To port, or not to port?
@@ -14,15 +14,15 @@ That mindset actually held up for quite a while.
 
 Last month I got stuck figuring out how to get a toehold in porting the jgit code for walking revision trees.
 
-And then I came to this stunning realization …
+That led to a stunning realization …
 
 **Elixir and Java are not the same.**
 
 The two language environments have fundamentally different approaches to system design. I **like** Elixir precisely _because_ it isn't object-oriented, _because_ it's functional, _because_ it has immutable data, _because_ it uses process boundaries to forcibly hide implementation details.
 
-Java and the JVM do none of those things.
+Java and the JVM are none of those things.
 
-Jgit is a fantastic implementation of git in an object-oriented, shared-state world. But it does a poor job of describing how you would build git in a purely-functional world.
+Jgit is a fantastic implementation of git given the design space and capabilities of the Java runtime. But it does a poor job of describing how you would build git in a purely-functional world.
 
 And so, with love, I decided to part ways with the jgit port.
 
@@ -74,6 +74,16 @@ This is the first of the commands referenced in the [**git objects** part of the
 
 See [`Xgit.Plumbing.HashObject.run/2`](https://hexdocs.pm/xgit/Xgit.Plumbing.HashObject.html#run/2) for details.
 
+## Testing Strategy
 
+I may be stating the obvious, but a key goal of Xgit must be to interoperate correctly with other implementations of git.
 
-Talk about `git hash-object`.
+People who know me from my day job know that I am famous for this saying:
+
+> What you don't test, you will ^@(* up.
+
+So it should surprise no one that I'm employing a very aggressive strategy of verifying interoperability. Many of the tests for the above two commands run an operation in Xgit using the on-disk repository implementation and run the same operation again using command-line git. If the same operation has been done in both versions, the folder contents should be identical. If they are, the test passes.
+
+## What's Next?
+
+Having wrapped up `git hash-object`, I'll continue through the [git objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) page. Next up is `git cat-object`.
