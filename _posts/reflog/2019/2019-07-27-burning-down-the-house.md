@@ -58,6 +58,22 @@ Code in Xgit is organized into the following categories, reflected in module nam
 
 * [**`util`**](https://github.com/elixir-git/xgit/tree/master/lib/xgit/util): The modules in this folder aren't really part of the data model _per se_, but provide building blocks to make higher layers of Xgit possible.
 
-## The First Plumbing
+## Starting Points
+
+Two git commands have been implemented thus far:
+
+### [`git init`](https://git-scm.com/docs/git-init)
+
+A minimal implementation of `git init` has been made available as part of the reference (on-disk) implementation of repository.
+
+See [`Xgit.Repository.OnDisk.create/1`](https://hexdocs.pm/xgit/Xgit.Repository.OnDisk.html#create/1) for details. This is, by far, not a complete port of `git init`. There are many edge cases that are left unimplemented. But it's enough to allow us to bootstrap further work.
+
+### [`git hash-object`](https://git-scm.com/docs/git-hash-object)
+
+This is the first of the commands referenced in the [**git objects** part of the git internals book](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
+
+See [`Xgit.Plumbing.HashObject.run/2`](https://hexdocs.pm/xgit/Xgit.Plumbing.HashObject.html#run/2) for details.
+
+
 
 Talk about `git hash-object`.
