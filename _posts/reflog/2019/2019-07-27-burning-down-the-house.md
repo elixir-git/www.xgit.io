@@ -57,3 +57,7 @@ Code in Xgit is organized into the following categories, reflected in module nam
 * [**`core`**](https://github.com/elixir-git/xgit/tree/master/lib/xgit/core): The modules in this folder describe the fundamental building blocks of git's data model (objects, object IDs, tags, commits, etc.). These are used within Xgit to communicate about the content in a repository.
 
 * [**`util`**](https://github.com/elixir-git/xgit/tree/master/lib/xgit/util): The modules in this folder aren't really part of the data model _per se_, but provide building blocks to make higher layers of Xgit possible.
+
+## The First Plumbing
+
+Talk about `git hash-object`.
