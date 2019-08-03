@@ -6,7 +6,7 @@
   margin: 0 auto;
   padding-left: 1em;
   padding-right: 1em;
-  max-width: 30rem;
+  max-width: 40rem;
 }
 
 .page-title {
@@ -307,8 +307,6 @@
       width: auto;
       margin: 0;
     }
-
-    max-width: 28em;
   }
 
   .page-share {
@@ -321,6 +319,10 @@
   .page-wrapper {
     max-width: $main-sidebar-max-width;
   }
+}
+
+.page-content {
+  max-width: 28rem;
 }
 
 .endmark {
