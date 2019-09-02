@@ -38,7 +38,7 @@ Those two issues and one other minor performance improvement formed the core of 
 
 ### 0.1.6: Update Index File
 
-I then spent the next week or so building the API equivelant of `git update-index --cacheinfo`, which I call [`Xgit.Plumbing.UpdateIndex.CacheInfo`](https://hexdocs.pm/xgit/0.1.6/Xgit.Plumbing.UpdateIndex.CacheInfo.html#content). The rev graph above was captured during that time. Xgit is now able to both read and write index files and modify [`Xgit.Core.DirCache`](https://hexdocs.pm/xgit/0.1.6/Xgit.Core.DirCache.html#content) structures accordingly.
+I then spent the next week or so building the API equivalent of `git update-index --cacheinfo`, which I call [`Xgit.Plumbing.UpdateIndex.CacheInfo`](https://hexdocs.pm/xgit/0.1.6/Xgit.Plumbing.UpdateIndex.CacheInfo.html#content). The rev graph above was captured during that time. Xgit is now able to both read and write index files and modify [`Xgit.Core.DirCache`](https://hexdocs.pm/xgit/0.1.6/Xgit.Core.DirCache.html#content) structures accordingly.
 
 
 ### 0.2.0: Refactoring
