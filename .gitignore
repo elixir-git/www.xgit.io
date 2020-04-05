@@ -2,6 +2,7 @@ _asset_bundler_cache
 _site
 .bundle
 .DS_Store
+.jekyll-cache
 .jekyll-metadata
 .sass-cache
 *.gem
@@ -11,3 +12,4 @@ codekit-config.json
 Gemfile.lock
 node_modules
 npm-debug.log*
+vendor
